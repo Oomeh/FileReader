@@ -6,8 +6,12 @@
 package reader;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.File;
 import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collections;
 
@@ -49,12 +53,24 @@ public class Reader {
                 //Prints the items
                 System.out.println(lineArray.get(j));
             }
-            
+        //Creates the file to be written on
+        File file = new File("c:\\writtenfile.txt");
+
+
+            PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("c:\\writtenfile.txt")));
+            for(int k = 0; k < i; k++)
+            {
+                writer.println(lineArray.get(k));
+                
+            }
+            writer.close();
         }
-        //If fileread fails, catches
+        //If file read/write fails, catches
         catch(IOException e){
-            System.out.println("File read failed D:");
+            System.out.println("File read/write failed D:");
         }
+        
+
     }
     
 }
