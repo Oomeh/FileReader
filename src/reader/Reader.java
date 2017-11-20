@@ -56,13 +56,15 @@ public class Reader {
         //Creates the file to be written on
         File file = new File("c:\\writtenfile.txt");
 
-
+            //Creates the writer
             PrintWriter writer = new PrintWriter(new BufferedWriter(new FileWriter("c:\\writtenfile.txt")));
             for(int k = 0; k < i; k++)
             {
+                //Writes the current line onto the file
                 writer.println(lineArray.get(k));
                 
             }
+            //Closes the writer
             writer.close();
         }
         //If file read/write fails, catches
