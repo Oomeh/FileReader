@@ -32,7 +32,7 @@ public class Reader {
 
         try{
             //Buffers the file for reading and finds the file to read
-        BufferedReader in = new BufferedReader((new FileReader("/Users/bvance/Documents/BoyNames.txt")));   
+        BufferedReader in = new BufferedReader((new FileReader("/Volumes/Shared Files/Sample Data Files/BoyNames.txt")));   
         //Reads the first line
         String line = in.readLine();      
 
